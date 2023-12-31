@@ -1,29 +1,49 @@
 import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
+import Resume from "./Resume";
+import Projects from "./Projects";
+import Certificates from "./Certificates";
+import Contact from "./Contact";
+import Homepage from "./HomePage";
 
 const Navigation = ({ react }) => {
   return (
-    <NavigationBar>
-      <Name>Durgesh Suryawanshi</Name>
-      <ReactLogo>
-        <RotatingImage src={react} alt="React Logo" />
-      </ReactLogo>
-      <NvigationOptions>
-        <li>
-          <StyledLink to="/projects">PROJECTS</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/resume">RESUME</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/certificate">CERTIFICATES</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/contact">CONTACT</StyledLink>
-        </li>
-      </NvigationOptions>
-    </NavigationBar>
+    <>
+      <NavigationBar>
+        <Container>
+          <ReactLogo>
+            <RotatingImage src={react} alt="React Logo" />
+          </ReactLogo>
+          <Name>Durgesh Suryawanshi</Name>
+        </Container>
+
+        <NvigationOptions>
+          <li>
+            <StyledLink to="/home">HOME</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/projects">PROJECTS</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/resume">RESUME</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/certificate">CERTIFICATES</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/contact">CONTACT</StyledLink>
+          </li>
+        </NvigationOptions>
+      </NavigationBar>
+      <Routes>
+        <Route path="/home" element={<Homepage />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/certificate" element={<Certificates />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 };
 
@@ -33,8 +53,13 @@ Navigation.propTypes = {
   react: PropTypes.any.isRequired,
 };
 
+const Container = styled.section`
+  width: 50%;
+  display: flex;
+`;
+
 const NavigationBar = styled.div`
-  height: 8vh;
+  height: 3rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -44,6 +69,7 @@ const NavigationBar = styled.div`
 
 const Name = styled.h2`
   letter-spacing: 0.2rem;
+  color: white;
 `;
 
 const rotate360 = keyframes`
@@ -57,23 +83,22 @@ const rotate360 = keyframes`
 
 const ReactLogo = styled.div`
   height: 100%;
-  margin-left: 6rem;
-  width: 20%;
+  width: 10%;
+  padding: 0.4rem;
   animation: ${rotate360} 25s linear infinite;
 `;
 
 const RotatingImage = styled.img`
   width: 100%;
-  max-height: 100%;
+  margin-top: 0.2rem;
 `;
 
 const NvigationOptions = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
   width: 30%;
-  margin-right: 0.5rem;
+  margin-right: 5rem;
 
   li {
     list-style: none;
@@ -81,12 +106,12 @@ const NvigationOptions = styled.section`
 `;
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
+  color: white;
   letter-spacing: 0.1rem;
   font-weight: 600;
+  margin-right: 1rem;
 
   &:hover {
-    color: #1ca7df;
+    color: #7fd2f3;
   }
 `;
