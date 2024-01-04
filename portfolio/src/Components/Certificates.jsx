@@ -11,7 +11,7 @@ const Certificates = () => {
 
   setTimeout(() => {
     handleImage();
-  }, 2500);
+  }, 2200);
 
   const handleImage = () => {
     if (activeImage === 0) {
@@ -43,8 +43,8 @@ const CertificateContainer = styled.div`
     width: 550px;
     height: 450px;
     border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(251, 250, 252, 0.2),
-      0 20px 40px rgba(254, 254, 255, 0.2);
+    box-shadow: 0 12px 22px rgba(251, 250, 252, 0.2),
+      0 15px 30px rgba(254, 254, 255, 0.2);
   }
 
   & :hover {

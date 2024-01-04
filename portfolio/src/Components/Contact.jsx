@@ -81,5 +81,6 @@ const Button = styled.button`
   &:hover {
     box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),
       0 5px 10px rgba(254, 254, 255, 0.2);
+    letter-spacing: 0.2rem;
   }
 `;
