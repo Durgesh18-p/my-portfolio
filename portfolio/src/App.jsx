@@ -3,6 +3,10 @@ import reactlogo from "./assets/reactlogo.svg";
 import Navigation from "./Components/Navigation";
 import space1 from "./assets/space1.jpg";
 import Homepage from "./Components/HomePage";
+// import Projects from "./Components/Projects";
+// import Resume from "./Components/Resume";
+// import Certificates from "./Components/Certificates";
+// import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -10,6 +14,10 @@ function App() {
       <Container>
         <Navigation react={reactlogo} />
         <Homepage></Homepage>
+        {/* <Projects />
+        <Resume />
+        <Certificates />
+        <Contact /> */}
       </Container>
     </>
   );

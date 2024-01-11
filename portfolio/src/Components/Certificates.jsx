@@ -40,15 +40,13 @@ const CertificateContainer = styled.div`
   background: url(video);
 
   img {
-    width: 550px;
-    height: 450px;
+    width: 560px;
+    height: 400px;
     border-radius: 10px;
-    box-shadow: 0 12px 22px rgba(251, 250, 252, 0.2),
-      0 15px 30px rgba(254, 254, 255, 0.2);
   }
 
-  & :hover {
-    width: 600px;
-    height: 500px;
+  img:hover {
+    box-shadow: 0 8px 15px rgba(188, 188, 189, 0.2),
+      0 10px 22px rgba(254, 254, 255, 0.2);
   }
 `;
