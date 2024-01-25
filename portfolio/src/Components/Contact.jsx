@@ -70,7 +70,7 @@ const WhatsApp = styled.div`
 
 const Button = styled.button`
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   width: 10rem;
   background-color: transparent;
