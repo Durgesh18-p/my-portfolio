@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
 import { Link, Route, Routes } from "react-router-dom";
-import Resume from "./Resume";
+// import Resume from "./Resume";
 import Projects from "./Projects";
 import Certificates from "./Certificates";
 import Contact from "./Contact";
@@ -25,9 +25,9 @@ const Navigation = ({ react }) => {
           <li>
             <StyledLink to="/projects">PROJECTS</StyledLink>
           </li>
-          <li>
+          {/* <li>
             <StyledLink to="/resume">RESUME</StyledLink>
-          </li>
+          </li> */}
           <li>
             <StyledLink to="/certificate">CERTIFICATES</StyledLink>
           </li>
@@ -39,7 +39,7 @@ const Navigation = ({ react }) => {
       <Routes>
         <Route path="/home" element={<Homepage />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/resume" element={<Resume />} />
+        {/* <Route path="/resume" element={<Resume />} /> */}
         <Route path="/certificate" element={<Certificates />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
@@ -59,12 +59,13 @@ const Container = styled.section`
 `;
 
 const NavigationBar = styled.div`
-  height: 3rem;
+  height: 3.5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem;
+  background-color: #000000;
 `;
 
 const Name = styled.h2`
@@ -112,6 +113,6 @@ const StyledLink = styled(Link)`
   margin-right: 1rem;
 
   &:hover {
-    color: #7fd2f3;
+    color: #3860be;
   }
 `;

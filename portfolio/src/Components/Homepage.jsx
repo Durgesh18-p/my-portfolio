@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import space from "../assets/rocket.jpg";
 const Homepage = () => {
   return (
     <HomePage>
@@ -27,22 +27,23 @@ const Homepage = () => {
       </Heading>
       <AboutMe>
         <KnowMe>
+          <span>About Me</span>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            sequi quisquam corporis distinctio iste minima fugiat dolore,
-            voluptas obcaecati laborum officia, inventore aliquid consectetur
-            incidunt voluptatem praesentium at expedita nisi aspernatur officiis
-            sunt! Voluptas quam, magnam saepe ex officia laudantium.
+            As an aspiring frontend developer, I possess robust understanding of
+            React JS, JavaScript, HTML and CSS. Additionally I am familiar with
+            other technologies like Python , SQL, Java. With the strong desire
+            of learning new things , I am open for full-time as well internship
+            opportunities.
           </p>
         </KnowMe>
         <Skills>
-          <li>React JS</li>
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Tailwind</li>
-          <li>SQL</li>
-          <li>Python</li>
+          <li> • React JS</li>
+          <li> • JavaScript</li>
+          <li> • HTML</li>
+          <li> • CSS</li>
+          <li> • Tailwind</li>
+          <li> • SQL</li>
+          <li> • Python</li>
         </Skills>
       </AboutMe>
     </HomePage>
@@ -52,18 +53,32 @@ const Homepage = () => {
 export default Homepage;
 
 const HomePage = styled.section`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
+
   display: flex;
+  height: 100vh;
   flex-direction: column;
+  background: url(${space});
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto Condensed", sans-serif;
 `;
 
 const Heading = styled.div`
-  height: 10%;
   padding: 5rem;
   text-align: center;
   font-size: 3rem;
+  /* box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),
+    0 5px 10px rgba(254, 254, 255, 0.2); */
+
+  h1 {
+    box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),
+      0 5px 10px rgba(254, 254, 255, 0.2);
+  }
 
   span {
     margin: 0 0.1rem;
+    transition: all 0.2s linear;
   }
 
   span:hover {
@@ -80,11 +95,20 @@ const KnowMe = styled.div`
   width: 50%;
   padding-left: 2rem;
 
+  span {
+    color: #3860be;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-left: 15rem;
+    font-size: 2rem;
+  }
+
   p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-left: 1rem;
     color: white;
     font-weight: 400;
+    letter-spacing: 0.1rem;
   }
 `;
 
@@ -97,9 +121,8 @@ const Skills = styled.div`
 
   li {
     list-style: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
   }
 

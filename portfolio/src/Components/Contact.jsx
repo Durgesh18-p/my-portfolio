@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import space from "../assets/space1.jpg";
+import space from "../assets/rocket.jpg";
 
 const Contact = () => {
   const handleWhatsappContact = () => {
@@ -77,6 +77,7 @@ const Button = styled.button`
   color: white;
   letter-spacing: 0.1rem;
   cursor: pointer;
+  transition: all ease-in 0.5s;
 
   &:hover {
     box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),

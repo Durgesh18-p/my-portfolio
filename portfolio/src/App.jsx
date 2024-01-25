@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import reactlogo from "./assets/reactlogo.svg";
 import Navigation from "./Components/Navigation";
-import space1 from "./assets/space1.jpg";
+import space1 from "./assets/rocket.jpg";
 import Homepage from "./Components/HomePage";
 // import Projects from "./Components/Projects";
 // import Resume from "./Components/Resume";
@@ -27,7 +27,7 @@ export default App;
 
 const Container = styled.div`
   height: 100vh;
-  background: url(${space1});
+  /* background: url(${space1}); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

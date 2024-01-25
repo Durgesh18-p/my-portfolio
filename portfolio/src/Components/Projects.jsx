@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import diceGame from "../assets/Dicegame.mp4";
 import AdviceApp from "../assets/AdviceApp.mp4";
+import space from "../assets/space.jpg";
 
 const Projects = () => {
   const handleAdviceAppGithubClick = () => {
@@ -41,6 +42,9 @@ const Project = styled.div`
   padding: 0.5rem;
   text-align: center;
   scroll-behavior: auto;
+  height: 100vh;
+  background: url(${space});
+  background-color: #555555;
 `;
 
 const Slogan = styled.p`
@@ -71,6 +75,7 @@ const Project1 = styled.div`
   video {
     height: 70%;
     width: 100%;
+    transition: all ease-in 0.5s;
   }
 
   video:hover {
@@ -88,6 +93,7 @@ const Project2 = styled.div`
   video {
     height: 70%;
     width: 100%;
+    transition: all ease-in 0.5s;
   }
 
   video:hover {
@@ -105,6 +111,7 @@ const Project3 = styled.div`
   /* video {
     height: 70%;
     width: 100%;
+  transition: all ease-in 0.5s;
   }
 
   video:hover {
@@ -124,14 +131,16 @@ const Button = styled.button`
   font-weight: 550;
   width: 10rem;
   background-color: transparent;
-  color: white;
+  color: #000;
   letter-spacing: 0.1rem;
   cursor: pointer;
   margin-top: 0.8rem;
+  transition: all ease-in 0.5s;
 
   &:hover {
     box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),
       0 5px 10px rgba(254, 254, 255, 0.2);
     letter-spacing: 0.2rem;
+    color: white;
   }
 `;
