@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import space from "../assets/rocket.jpg";
+import { ReactTyped } from "react-typed";
+
 const Homepage = () => {
   return (
     <HomePage>
@@ -25,27 +26,36 @@ const Homepage = () => {
           <span>R</span>
         </h1>
       </Heading>
-      <AboutMe>
-        <KnowMe>
-          <span>About Me</span>
-          <p>
-            As an aspiring frontend developer, I possess robust understanding of
-            React JS, JavaScript, HTML and CSS. Additionally I am familiar with
-            other technologies like Python , SQL, Java. With the strong desire
-            of learning new things , I am open for full-time as well internship
-            opportunities.
-          </p>
-        </KnowMe>
-        <Skills>
-          <li> • React JS</li>
-          <li> • JavaScript</li>
-          <li> • HTML</li>
-          <li> • CSS</li>
-          <li> • Tailwind</li>
-          <li> • SQL</li>
-          <li> • Python</li>
-        </Skills>
-      </AboutMe>
+      <Skills>
+        <Section>
+          <h2>Skills</h2>
+          <ul>
+            <li>React JS</li>
+            <li>JavaScript</li>
+            <li>Redux</li>
+            <li>Tailwind CSS</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+          <section>
+            <ReactTyped
+              strings={["Learning Continuously ..."]}
+              typeSpeed={40}
+              backSpeed={50}
+              loop
+            />
+          </section>
+        </Section>
+        <Experiance>
+          <h2>Experience</h2>
+          <h3>Actnable AI</h3>
+          <ul>
+            <li>Built an UI from scratch using React JS.</li>
+            <li>Integrated python fastAPI with frontend.</li>
+            <li>Worked on MinIo , a cloud based file storage.</li>
+          </ul>
+        </Experiance>
+      </Skills>
     </HomePage>
   );
 };
@@ -58,9 +68,7 @@ const HomePage = styled.section`
   display: flex;
   height: 100vh;
   flex-direction: column;
-  background: url(${space});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #020617;
   font-family: "Roboto Condensed", sans-serif;
 `;
 
@@ -68,8 +76,6 @@ const Heading = styled.div`
   padding: 5rem;
   text-align: center;
   font-size: 3rem;
-  /* box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),
-    0 5px 10px rgba(254, 254, 255, 0.2); */
 
   h1 {
     box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),
@@ -86,48 +92,67 @@ const Heading = styled.div`
   }
 `;
 
-const AboutMe = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
-const KnowMe = styled.div`
-  width: 50%;
-  padding-left: 2rem;
-
-  span {
-    color: #3860be;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    margin-left: 15rem;
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1.3rem;
-    margin-left: 1rem;
-    color: white;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-  }
-`;
-
 const Skills = styled.div`
-  width: 50%;
+  width: 100%;
+  color: #fc1aa5;
   display: flex;
-  flex-wrap: wrap;
-  padding: 3rem;
-  gap: 3rem;
+`;
 
-  li {
-    list-style: none;
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    color: white;
+const Section = styled.section`
+  width: 50%;
+  border: 1px solid red;
+  /* padding-right: 5rem; */
+  border-left: none;
+  h2 {
+    text-align: center;
   }
 
-  li:hover {
-    color: skyblue;
-    border-radius: 5px;
+  ul {
+    margin-left: 6rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  section {
+    margin-left: 16.5rem;
+  }
+
+  ul > section:nth-child(2) {
+    margin-left: 10rem;
+  }
+
+  ul li {
+    list-style: none;
+    color: #f4f4f4;
+  }
+`;
+
+const Experiance = styled.section`
+  color: white;
+  width: 50%;
+  border: 1px solid red;
+  border-right: none;
+  /* padding: 0rem 4rem; */
+  h2 {
+    text-align: center;
+    color: #fc1aa5;
+  }
+
+  h3 {
+    margin-left: 3rem;
+    width: 103px;
+    padding: 0.3rem;
+    border: 1px solid red;
+    color: #f4f4f4;
+  }
+
+  ul li {
+    /* list-style: none; */
+    margin-top: 0.7rem;
+  }
+
+  ul {
+    margin-left: 1.5rem;
   }
 `;
