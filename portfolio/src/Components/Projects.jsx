@@ -43,6 +43,7 @@ const Projects = () => {
 export default Projects;
 
 const Project = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
   padding: 0.5rem;
   text-align: center;
   scroll-behavior: auto;
@@ -51,16 +52,19 @@ const Project = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #555555;
+  font-family: "Roboto Condensed", sans-serif;
 `;
 
 const Slogan = styled.p`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
   color: white;
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
 
   span {
-    color: #2aafe4;
+    color: #fc039c;
+    font-family: "Roboto Condensed", sans-serif;
   }
 `;
 
@@ -128,16 +132,18 @@ const Project3 = styled.div`
 `;
 
 const Button = styled.button`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: 550;
   width: 10rem;
   background-color: transparent;
-  color: white;
+  color: #fc1aa5;
   letter-spacing: 0.1rem;
   cursor: pointer;
   margin-top: 0.8rem;
   transition: all ease-in 0.5s;
+  font-family: "Roboto Condensed", sans-serif;
 
   &:hover {
     box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),

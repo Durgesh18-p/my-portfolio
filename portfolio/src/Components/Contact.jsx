@@ -74,7 +74,7 @@ const Button = styled.button`
   font-weight: 500;
   width: 10rem;
   background-color: transparent;
-  color: white;
+  color: #fc039c;
   letter-spacing: 0.1rem;
   cursor: pointer;
   transition: all ease-in 0.5s;

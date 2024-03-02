@@ -49,6 +49,7 @@ const Homepage = () => {
         <Experiance>
           <h2>Experience</h2>
           <h3>Actnable AI</h3>
+          <span>Intern</span>
           <ul>
             <li>Built an UI from scratch using React JS.</li>
             <li>Integrated python fastAPI with frontend.</li>
@@ -136,6 +137,11 @@ const Experiance = styled.section`
   /* padding: 0rem 4rem; */
   h2 {
     text-align: center;
+    color: #fc1aa5;
+  }
+
+  span {
+    margin-left: 3rem;
     color: #fc1aa5;
   }
 
