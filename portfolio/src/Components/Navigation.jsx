@@ -5,7 +5,8 @@ import { Link, Route, Routes } from "react-router-dom";
 import Projects from "./Projects";
 import Certificates from "./Certificates";
 import Contact from "./Contact";
-import Homepage from "./HomePage";
+// import Homepage from "./HomePage";
+import { ReactTyped } from "react-typed";
 
 const Navigation = ({ react }) => {
   return (
@@ -15,7 +16,14 @@ const Navigation = ({ react }) => {
           <ReactLogo>
             <RotatingImage src={react} alt="React Logo" />
           </ReactLogo>
-          <Name>Durgesh Suryawanshi</Name>
+          <h1>
+            <ReactTyped
+              strings={["Durgesh Suryawanshi."]}
+              typeSpeed={150}
+              backSpeed={80}
+              loop
+            />
+          </h1>
         </Container>
 
         <NvigationOptions>
@@ -37,7 +45,7 @@ const Navigation = ({ react }) => {
         </NvigationOptions>
       </NavigationBar>
       <Routes>
-        <Route path="/home" element={<Homepage />} />
+        {/* <Route path="/home" element={<Homepage />} /> */}
         <Route path="/projects" element={<Projects />} />
         {/* <Route path="/resume" element={<Resume />} /> */}
         <Route path="/certificate" element={<Certificates />} />
@@ -56,21 +64,23 @@ Navigation.propTypes = {
 const Container = styled.section`
   width: 50%;
   display: flex;
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
+  h1 {
+    margin-top: 1.6rem;
+    font-family: "Roboto Condensed", sans-serif;
+  }
 `;
 
 const NavigationBar = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
   height: 3.5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem;
-  background-color: #000000;
-`;
-
-const Name = styled.h2`
-  letter-spacing: 0.2rem;
-  color: white;
+  background-color: #002855;
+  font-family: "Roboto Condensed", sans-serif;
 `;
 
 const rotate360 = keyframes`
@@ -107,12 +117,15 @@ const NvigationOptions = styled.section`
 `;
 
 const StyledLink = styled(Link)`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
   color: white;
   letter-spacing: 0.1rem;
   font-weight: 600;
   margin-right: 1rem;
+  transition: all 0.7s ease;
+  font-family: "Roboto Condensed", sans-serif;
 
   &:hover {
-    color: #3860be;
+    color: #fc1aa5;
   }
 `;
