@@ -1,9 +1,21 @@
 import styled from "styled-components";
 import { ReactTyped } from "react-typed";
+import { useState } from "react";
 
 const Homepage = () => {
+  const [dotPosition, setDotPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (event) => {
+    setDotPosition({ x: event.clientX, y: event.clientY });
+  };
+
+  // Function to reset dot position when mouse leaves the homepage
+  const handleMouseLeave = () => {
+    setDotPosition({ x: 0, y: 0 });
+  };
   return (
-    <HomePage>
+    <HomePage onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+      <Dot style={{ left: `${dotPosition.x}px`, top: `${dotPosition.y}px` }} />
       <Heading>
         <h1>
           <span>F</span>
@@ -97,6 +109,15 @@ const Skills = styled.div`
   width: 100%;
   color: #fc1aa5;
   display: flex;
+`;
+
+const Dot = styled.div`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  pointer-events: none; /* Ensures the dot doesn't interfere with mouse events */
 `;
 
 const Section = styled.section`

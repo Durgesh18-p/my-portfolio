@@ -7,11 +7,20 @@ import Certificates from "./Certificates";
 import Contact from "./Contact";
 // import Homepage from "./HomePage";
 import { ReactTyped } from "react-typed";
+import { useState } from "react";
 
 const Navigation = ({ react }) => {
+  const [dotPosition, setDotPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (event) => {
+    setDotPosition({ x: event.clientX, y: event.clientY });
+  };
   return (
     <>
-      <NavigationBar>
+      <NavigationBar onMouseMove={handleMouseMove}>
+        <Dot
+          style={{ left: `${dotPosition.x}px`, top: `${dotPosition.y}px` }}
+        />
         <Container>
           <ReactLogo>
             <RotatingImage src={react} alt="React Logo" />
@@ -81,6 +90,14 @@ const NavigationBar = styled.div`
   padding: 0.7rem;
   background-color: #002855;
   font-family: "Roboto Condensed", sans-serif;
+`;
+const Dot = styled.div`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #a3caf7;
+  position: absolute;
+  pointer-events: none; /* Ensures the dot doesn't interfere with mouse events */
 `;
 
 const rotate360 = keyframes`

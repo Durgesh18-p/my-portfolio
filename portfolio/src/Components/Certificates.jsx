@@ -10,6 +10,17 @@ const Certificates = () => {
   const certificates = [ibm, webEssentials, cisco, sql];
   const [activeImage, setActiveImage] = useState(0);
 
+  const [dotPosition, setDotPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (event) => {
+    setDotPosition({ x: event.clientX, y: event.clientY });
+  };
+
+  // Function to reset dot position when mouse leaves the homepage
+  const handleMouseLeave = () => {
+    setDotPosition({ x: 0, y: 0 });
+  };
+
   setTimeout(() => {
     handleImage();
   }, 2200);
@@ -23,7 +34,11 @@ const Certificates = () => {
   };
 
   return (
-    <CertificateContainer>
+    <CertificateContainer
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Dot style={{ left: `${dotPosition.x}px`, top: `${dotPosition.y}px` }} />
       <img src={certificates[activeImage]} alt="Certificate" />
     </CertificateContainer>
   );
@@ -53,4 +68,13 @@ const CertificateContainer = styled.div`
     width: 580px;
     height: 420px;
   }
+`;
+
+const Dot = styled.div`
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  pointer-events: none; /* Ensures the dot doesn't interfere with mouse events */
 `;
