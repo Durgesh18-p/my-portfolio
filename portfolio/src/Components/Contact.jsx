@@ -13,11 +13,11 @@ const Contact = () => {
 
   return (
     <Container>
-      <LinkedIn>
+      <LinkedIn id="linkedin">
         <i className="fa-brands fa-linkedin"></i>
         <Button onClick={handleLinkedInContact}>LinkedIn</Button>
       </LinkedIn>
-      <WhatsApp>
+      <WhatsApp id="whatsapp">
         <i className="fa-brands fa-square-whatsapp"></i>
         <Button onClick={handleWhatsappContact}>WhatsApp</Button>
       </WhatsApp>
@@ -50,6 +50,11 @@ const LinkedIn = styled.div`
     font-size: 20rem;
     color: #0096ff;
   }
+
+  :hover {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>'),
+      auto;
+  }
 `;
 
 const WhatsApp = styled.div`
@@ -65,6 +70,11 @@ const WhatsApp = styled.div`
   i {
     font-size: 20rem;
     color: #25d366;
+  }
+
+  :hover {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>'),
+      auto;
   }
 `;
 
