@@ -4,7 +4,8 @@ import ibm from "../assets/ibm.png";
 import webEssentials from "../assets/webEssentials.jpg";
 import cisco from "../assets/cisco.jpeg";
 import sql from "../assets/sql.jpg";
-import space from "../assets/space.jpg";
+// import space from "../assets/space.jpg";
+import space1 from "../assets/rocket.jpg";
 
 const Certificates = () => {
   const certificates = [ibm, webEssentials, cisco, sql];
@@ -23,7 +24,7 @@ const Certificates = () => {
 
   setTimeout(() => {
     handleImage();
-  }, 2200);
+  }, 2000);
 
   const handleImage = () => {
     if (activeImage === 0) {
@@ -52,7 +53,8 @@ const CertificateContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(${space});
+  background: url(${space1});
+  font-family: "Roboto Condensed", sans-serif;
 
   img {
     width: 560px;

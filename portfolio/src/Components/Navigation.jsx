@@ -75,7 +75,9 @@ const Container = styled.section`
   display: flex;
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
   h1 {
-    margin-top: 1.8rem;
+    position: fixed;
+    left: 6rem;
+    top: 1.6rem;
     font-family: "Roboto Condensed", sans-serif;
   }
 `;

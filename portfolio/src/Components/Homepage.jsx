@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { ReactTyped } from "react-typed";
 import { useState } from "react";
+import { MdEngineering } from "react-icons/md";
+import { FaBriefcase } from "react-icons/fa";
 
 const Homepage = () => {
   const [dotPosition, setDotPosition] = useState({ x: 0, y: 0 });
@@ -40,7 +42,10 @@ const Homepage = () => {
       </Heading>
       <Skills>
         <Section>
-          <h2>Skills</h2>
+          <h2>
+            Skills <MdEngineering style={{ color: "#fff" }} />
+          </h2>
+
           <ul>
             <li>React JS</li>
             <li>JavaScript</li>
@@ -48,6 +53,7 @@ const Homepage = () => {
             <li>Tailwind CSS</li>
             <li>HTML</li>
             <li>CSS</li>
+            <li>Framer-motion</li>
           </ul>
           <section>
             <ReactTyped
@@ -59,7 +65,9 @@ const Homepage = () => {
           </section>
         </Section>
         <Experiance>
-          <h2>Experience</h2>
+          <h2>
+            Experience <FaBriefcase style={{ color: "#fff" }} />
+          </h2>
           <h3>Actnable AI</h3>
           <span>Intern</span>
           <ul>
@@ -125,12 +133,17 @@ const Section = styled.section`
   border: 1px solid red;
   /* padding-right: 5rem; */
   border-left: none;
+
+  div {
+    display: "flex";
+  }
+
   h2 {
     text-align: center;
   }
 
   ul {
-    margin-left: 6rem;
+    margin-left: 2rem;
     display: flex;
     gap: 0.8rem;
     flex-wrap: wrap;

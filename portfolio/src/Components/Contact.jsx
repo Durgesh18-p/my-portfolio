@@ -83,15 +83,21 @@ const Button = styled.button`
   font-size: 1.3rem;
   font-weight: 500;
   width: 10rem;
-  background-color: transparent;
-  color: #fc039c;
+  color: #2c2c6c;
+  background-color: #4bd5ff;
   letter-spacing: 0.1rem;
   cursor: pointer;
   transition: all ease-in 0.5s;
+  border-radius: 10px;
+  background-color: #4bd5ff;
+  border: 1.8px solid #2c2c6c;
 
   &:hover {
-    box-shadow: 0 5px 12px rgba(251, 250, 252, 0.2),
-      0 5px 10px rgba(254, 254, 255, 0.2);
+    background: transparent;
+    border: 1px solid #4bd5ff;
+    color: #4bd5ff;
+    box-shadow: 0 5px 8px rgba(251, 250, 252, 0.2),
+      0 5px 7px rgba(254, 254, 255, 0.2);
     letter-spacing: 0.2rem;
   }
 `;
